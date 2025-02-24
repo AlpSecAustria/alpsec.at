@@ -8,6 +8,7 @@ export type Site = {
   title: string;
   ogImage?: string;
   lightAndDarkMode: boolean;
+  search: boolean;
   postPerIndex: number;
   postPerPage: number;
   scheduledPostMargin: number;
