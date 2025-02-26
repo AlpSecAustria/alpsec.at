@@ -4,7 +4,14 @@ import Hr from "./Hr.astro";
 import LinkButton from "./LinkButton.astro";
 
 export interface Props {
-  activeNav?: "posts" | "archives" | "tags" | "about" | "search";
+  activeNav?:
+    | "posts"
+    | "archives"
+    | "tags"
+    | "partner"
+    | "über_uns"
+    | "kontakt"
+    | "search";
 }
 
 const { activeNav } = Astro.props;
@@ -57,7 +64,7 @@ const { activeNav } = Astro.props;
         <ul id="menu-items" class="display-none sm:flex">
           <li>
             <a href="/posts/" class={activeNav === "posts" ? "active" : ""}>
-              posts/
+              /posts
             </a>
           </li>
           <!-- <li>
@@ -66,8 +73,21 @@ const { activeNav } = Astro.props;
             </a>
           </li> -->
           <li>
-            <a href="/about/" class={activeNav === "about" ? "active" : ""}>
-              about/
+            <a
+              href="/über_uns/"
+              class={activeNav === "über_uns" ? "active" : ""}
+            >
+              /über uns
+            </a>
+          </li>
+          <li>
+            <a href="/partner/" class={activeNav === "partner" ? "active" : ""}>
+              /partner
+            </a>
+          </li>
+          <li>
+            <a href="/kontakt/" class={activeNav === "kontakt" ? "active" : ""}>
+              /kontakt
             </a>
           </li>
           <!-- {
@@ -159,7 +179,7 @@ const { activeNav } = Astro.props;
     @apply absolute -top-full left-16 z-50 bg-skin-accent px-3 py-2 text-skin-inverted transition-all focus:top-4;
   }
   .nav-container {
-    @apply mx-auto flex max-w-3xl flex-col items-center justify-between sm:flex-row;
+    @apply mx-auto flex max-w-4xl flex-col items-center justify-between sm:flex-row;
   }
   .top-nav-wrap {
     @apply relative flex w-full items-start justify-between p-4 sm:items-center sm:py-8;

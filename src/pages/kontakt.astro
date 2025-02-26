@@ -1,0 +1,37 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+---
+
+<Layout>
+  <Header />
+  <main id="main-content">
+    <section id="contact">
+      <h1 class="text-bold text-2xl">Kontakt</h1>
+      <p>
+        Maximilian Birnbacher (Obmann): <a href="mailto:mb@alp-sec.org">
+          mb@alp-sec.org</a
+        ><br />
+        Felix Slama (Obmann-Stellvertreter): <a href="mailto:fs@alp-sec.org"
+          >fs@alp-sec.org</a
+        ><br />
+        Jannik Schager (Kasier): <a href="mailto:js@alp-sec.org"
+          >js@alp-sec.org</a
+        ><br />
+        Johannes Puinbroek (Webmaster): <a href="mailto:jp@alp-sec.org"
+          >jp@alp-sec.org</a
+        >
+      </p>
+      <h1 class="text-bold mt-5 text-2xl">Adresse</h1>
+      <p>Lastenstraße 26, <br />9020 Klagenfurt am Wörthersee</p>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  main {
+    @apply mt-10;
+  }
+</style>

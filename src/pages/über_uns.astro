@@ -1,0 +1,50 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+// import LinkButton from "@components/LinkButton.astro";
+// import Socials from "@components/Socials.astro";
+// import { SITE, SOCIALS } from "@config";
+---
+
+<Layout>
+  <Header />
+  <main id="main-content">
+    <section id="ueber_uns">
+      <h1 class="header">Unser Ziel</h1>
+      <p>
+        Unsere Mission ist es, die Gemeinschaft rund um Cybersicherheit in
+        Kaernten und Oesterreich zu fördern und zu staerken. Alle sind dazu
+        eingeladen dabei mit zu wirken, Vorkenntnisse sind dabei nicht
+        erforderlich. Trete dem Club-Discord bei, besuche unsere Club-Treffen im
+        Makerspace und nehme an Capture the Flag (CTF)-Wettbewerben oder
+        Coding-Wettbewerben teil.
+      </p>
+    </section>
+
+    <section id="wer_wir_sind">
+      <h1 class="header">Wer ist AlpSec</h1>
+    </section>
+
+    <section id="statuten">
+      <h1 class="header">Statuten</h1>
+      <p>
+        AlpSec - Verein zur Förderung von offensiver und defensiver
+        Cybersicherheit kurz: AlpSec
+      </p>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  h1 {
+    @apply mt-10;
+  }
+  p {
+    @apply mt-1;
+  }
+  .header {
+    @apply text-2xl;
+  }
+</style>

@@ -1,0 +1,67 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+
+import { Image } from "astro:assets";
+import bpn from "../assets/images/bpn.png";
+import makerspace from "../assets/images/makerspace-244px.png";
+import teledrones from "../assets/images/teledrones.png";
+import easyplus from "../assets/images/easyplus.webp";
+---
+
+<header>
+  <title></title>
+</header>
+<Layout>
+  <Header />
+  <main id="main-content">
+    <section id="partner">
+      <h1 class="text-center text-xl">Partner</h1>
+      <div class="flex justify-center">
+        <div class="sponsor-wrapper">
+          <a href="https://www.makerspace-carinthia.com/">
+            <Image
+              src={makerspace}
+              alt="Makerspace Carinthia"
+              class="sponsor"
+            />
+          </a>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="https://easyplus.media/">
+            <Image src={easyplus} alt="easyplus.media" class="sponsor" />
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="sponsoren">
+      <h1 class="text-center text-xl">Sponsoren</h1>
+      <div class="flex justify-center">
+        <div class="sponsor-wrapper">
+          <a href="https://www.bpn-group.com/">
+            <Image src={bpn} alt="BP Networks" class="sponsor" />
+          </a>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="https://www.tele-drones.com/">
+            <Image src={teledrones} alt="Teledrones" class="sponsor" />
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  main {
+    @apply mt-10;
+  }
+  .sponsor-wrapper {
+    @apply m-5 h-48 w-48;
+  }
+  .sponsor {
+    @apply object-contain;
+  }
+</style>
