@@ -1,0 +1,24 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+---
+
+<header>
+  <title></title>
+</header>
+<Layout>
+  <Header />
+  <main id="main-content">
+    <section id="statuten">
+      <h1 class="text-center text-xl">Statuten</h1>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  main {
+    @apply mt-10;
+  }
+</style>

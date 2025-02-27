@@ -19,6 +19,11 @@ module.exports = {
     },
 
     extend: {
+      spacing: {
+        '18': '4.5rem',    // Custom spacing 18 (72px)
+        '72': '18rem',     // Custom spacing 72 (288px)
+        '100': '25rem',    // Custom spacing 100 (400px)
+      },
       textColor: {
         skin: {
           base: withOpacity("--color-text-base"),

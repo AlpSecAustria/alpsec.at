@@ -9,6 +9,9 @@ import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { SITE, SOCIALS } from "@config";
+import { Image } from "astro:assets";
+
+import logo from "../assets/images/logo.png";
 
 const posts = await getCollection("blog");
 
@@ -28,28 +31,86 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
   />
   <!-- Make sure you put this AFTER Leaflet's CSS -->
   <script
+    is:inline
     src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""></script>
+
+  <!-- Elfsight LinkedIn Feed | Untitled LinkedIn Feed -->
+  <script is:inline src="https://static.elfsight.com/platform/platform.js" async
+  ></script>
 </head>
 
 <Layout>
   <Header />
   <main id="main-content">
-    <section id="About">
-      <h1 class="text-5xl">AlpSec</h1>
+    <section id="About" class="mb-18">
+      <div class="flex items-center justify-center">
+        <!-- <h1 class="w-1/2 text-right text-7xl">AlpSec</h1> -->
+        <Image src={logo} alt="AlpSec Logo" class="w-1/4" />
+
+        <p class="w-1/2 justify-center text-left text-xl">
+          Verein zur Förderung von Cybersicherheit in Kärnten und Österreich
+        </p>
+      </div>
     </section>
 
-    <section id="featured">
-      <h2>Where to find us</h2>
-      <div id="map"></div>
+    <section id="location" class="mb-18">
+      <h2 class="text-center">Wo man uns findet</h2>
+      <p class="mb-5 text-center">
+        Events und Treffen finden in dem
+        <LinkButton href="https://www.makerspace-carinthia.com/">
+          Makerspace
+        </LinkButton>
+        in der <br /> Lastenstraße 26, 9020 Klagenfurt am Wörthersee statt.
+      </p>
+      <div class="flex items-center justify-center">
+        <div class="h-400 w-full" id="map"></div>
+      </div>
+    </section>
 
-      <Hr />
+    <section id="socials" class="mt-18">
+      <h2 class="mt-15 text-center">Lerne die Community kennen</h2>
+      <div class="flex flex-wrap">
+        <div class="flex-social flex-1">
+          <p>
+            Tausche dich zu Themen rund um Cybersicherheit in unserer
+            Discordgruppe aus.
+          </p>
+          <div class="mt-5 grid place-content-center">
+            <iframe
+              src="https://discord.com/widget?id=1268638307118616576&theme=dark"
+              width="350"
+              height="450"
+              allowtransparency="true"
+              frameborder="0"
+              sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+            ></iframe>
+          </div>
+        </div>
+        <div class="flex-social flex-2">
+          <p>
+            Folge uns in den Sozialen Medien und abonniere unseren E-mail
+            Newsletter um auf dem neusten Stand zu bleiben.
+          </p>
+          <div class="grid place-content-center">
+            <div
+              class="elfsight-app-5ebd96be-b502-4ba6-b054-35dc6b472ce5 mt-5"
+              data-elfsight-app-lazy
+            >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <Hr /> -->
+    <section id="featured">
       {
         featuredPosts.length > 0 && (
           <>
             <section id="featured">
-              <h2>Latest Posts</h2>
+              <h2>Letzten Beitr&auml;ge</h2>
               <ul>
                 {featuredPosts.map(({ data, slug }) => (
                   <Card
@@ -101,7 +162,20 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
   <style>
     main {
-      @apply mt-10;
+      @apply mt-18;
+    }
+    h2 {
+      @apply text-3xl;
+    }
+    .leaflet-container {
+      height: 400px;
+      width: 600px;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .flex-social {
+      @apply mt-5 w-1/2 items-center justify-center text-center;
     }
 
     /* ===== Featured & Recent Posts Sections ===== */
@@ -118,3 +192,15 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     }
   </style>
 </Layout>
+
+<script>
+  const map = L.map("map").setView([46.6177192, 14.3171808], 16);
+  var marker = L.marker([46.6177192, 14.3171808]).addTo(map);
+  // marker.bindPopup("<b>AlpSec</b>").openPopup();
+
+  const tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution:
+      '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  }).addTo(map);
+</script>

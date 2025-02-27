@@ -8,13 +8,15 @@ import bpn from "../assets/images/bpn.png";
 import makerspace from "../assets/images/makerspace-244px.png";
 import teledrones from "../assets/images/teledrones.png";
 import easyplus from "../assets/images/easyplus.webp";
+import passgenau from "../assets/images/passgenau.svg";
+import pwndlabs from "../assets/images/pwndlabs.png";
 ---
 
 <header>
   <title></title>
 </header>
 <Layout>
-  <Header />
+  <Header activeNav="partner" />
   <main id="main-content">
     <section id="partner">
       <h1 class="text-center text-xl">Partner</h1>
@@ -28,11 +30,11 @@ import easyplus from "../assets/images/easyplus.webp";
             />
           </a>
         </div>
-        <div class="sponsor-wrapper">
+        <!-- <div class="sponsor-wrapper">
           <a href="https://easyplus.media/">
             <Image src={easyplus} alt="easyplus.media" class="sponsor" />
           </a>
-        </div>
+        </div> -->
       </div>
     </section>
     <section id="sponsoren">
@@ -43,9 +45,24 @@ import easyplus from "../assets/images/easyplus.webp";
             <Image src={bpn} alt="BP Networks" class="sponsor" />
           </a>
         </div>
-        <div class="sponsor-wrapper">
+        <!-- <div class="sponsor-wrapper">
           <a href="https://www.tele-drones.com/">
             <Image src={teledrones} alt="Teledrones" class="sponsor" />
+          </a>
+        </div> -->
+      </div>
+    </section>
+    <section id="network">
+      <h1 class="text-center text-xl">Netzwerk</h1>
+      <div class="flex justify-center">
+        <div class="sponsor-wrapper">
+          <a href="https://pwnd.at">
+            <Image src={pwndlabs} alt="PWND Labs" class="sponsor" />
+          </a>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="https://passgenau.digital/">
+            <Image src={passgenau} alt="Passgenau.digital" class="sponsor" />
           </a>
         </div>
       </div>
@@ -59,7 +76,7 @@ import easyplus from "../assets/images/easyplus.webp";
     @apply mt-10;
   }
   .sponsor-wrapper {
-    @apply m-5 h-48 w-48;
+    @apply m-5 h-32 w-48;
   }
   .sponsor {
     @apply object-contain;

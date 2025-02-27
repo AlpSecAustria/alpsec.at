@@ -5,32 +5,56 @@ import Footer from "@components/Footer.astro";
 // import LinkButton from "@components/LinkButton.astro";
 // import Socials from "@components/Socials.astro";
 // import { SITE, SOCIALS } from "@config";
+import LinkButton from "@components/LinkButton.astro";
 ---
 
 <Layout>
-  <Header />
+  <Header activeNav="über_uns" />
   <main id="main-content">
     <section id="ueber_uns">
-      <h1 class="header">Unser Ziel</h1>
+      <h1 class="header">Das Ziel von AlpSec</h1>
       <p>
         Unsere Mission ist es, die Gemeinschaft rund um Cybersicherheit in
         Kaernten und Oesterreich zu fördern und zu staerken. Alle sind dazu
         eingeladen dabei mit zu wirken, Vorkenntnisse sind dabei nicht
         erforderlich. Trete dem Club-Discord bei, besuche unsere Club-Treffen im
-        Makerspace und nehme an Capture the Flag (CTF)-Wettbewerben oder
-        Coding-Wettbewerben teil.
+        Makerspace und nehme an <LinkButton
+          href="https://en.wikipedia.org/wiki/Capture_the_flag_(cybersecurity)"
+        >
+          Capture the Flag (CTF)-Wettbewerben
+        </LinkButton> oder <LinkButton
+          href="https://en.wikipedia.org/wiki/Competitive_programming"
+        >
+          Coding-Wettbewerben
+        </LinkButton> teil.
       </p>
     </section>
 
     <section id="wer_wir_sind">
-      <h1 class="header">Wer ist AlpSec</h1>
+      <h2 class="header">Das Team</h2>
+      <p>
+        Gegr&uuml;ndet wurde AlpSec von Teilnehmer der <LinkButton
+          href="https://verbotengut.at/"
+        >
+          ACSC (Austrian Cyber Security Challenge)</LinkButton
+        >, <LinkButton href="https://ecsc.eu/">
+          ECSC (European Cyber Security Challenge)</LinkButton
+        > und <LinkButton href="https://www.htl-villach.at/"
+          >HTL Villach
+        </LinkButton> Alumni. Mittlerweile befinden sich Cybersecurity interessierte
+        von verschiedensten Bereichen im Verein.
+        <div class="flex flex-wrap">
+          <div></div>
+        </div>
+      </p>
     </section>
 
     <section id="statuten">
-      <h1 class="header">Statuten</h1>
+      <h2 class="header">Statuten</h2>
       <p>
-        AlpSec - Verein zur Förderung von offensiver und defensiver
-        Cybersicherheit kurz: AlpSec
+        Die Statuten befinden sich unter <LinkButton href="/statuten/"
+          >/statuten</LinkButton
+        >
       </p>
     </section>
   </main>
@@ -43,6 +67,9 @@ import Footer from "@components/Footer.astro";
   }
   p {
     @apply mt-1;
+  }
+  section {
+    @apply mt-5;
   }
   .header {
     @apply text-2xl;
