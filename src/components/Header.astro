@@ -8,6 +8,7 @@ export interface Props {
     | "posts"
     | "archives"
     | "tags"
+    | "mitglieder"
     | "partner"
     | "über_uns"
     | "kontakt"
@@ -78,6 +79,11 @@ const { activeNav } = Astro.props;
               class={activeNav === "über_uns" ? "active" : ""}
             >
               /über uns
+            </a>
+          </li>
+          <li>
+            <a href="/member/" class={activeNav === "member" ? "active" : ""}>
+              /mitglieder
             </a>
           </li>
           <li>
@@ -182,7 +188,7 @@ const { activeNav } = Astro.props;
     @apply mx-auto flex max-w-4xl flex-col items-center justify-between sm:flex-row;
   }
   .top-nav-wrap {
-    @apply relative flex w-full items-start justify-between p-4 sm:items-center sm:py-8;
+    @apply relative flex w-full items-start justify-between p-4 sm:items-center;
   }
   .logo {
     @apply absolute py-1 text-xl font-semibold sm:static sm:text-2xl;

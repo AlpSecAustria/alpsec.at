@@ -55,20 +55,6 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       </div>
     </section>
 
-    <section id="location" class="mb-18">
-      <h2 class="text-center">Wo man uns findet</h2>
-      <p class="mb-5 text-center">
-        Events und Treffen finden in dem
-        <LinkButton href="https://www.makerspace-carinthia.com/">
-          Makerspace
-        </LinkButton>
-        in der <br /> Lastenstraße 26, 9020 Klagenfurt am Wörthersee statt.
-      </p>
-      <div class="flex items-center justify-center">
-        <div class="h-400 w-full" id="map"></div>
-      </div>
-    </section>
-
     <section id="socials" class="mt-18">
       <h2 class="mt-15 text-center">Lerne die Community kennen</h2>
       <div class="flex flex-wrap">
@@ -101,6 +87,20 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="location" class="mb-18 mt-18">
+      <h2 class="text-center">Wo man uns findet</h2>
+      <p class="mb-5 text-center">
+        Events und Treffen finden in dem
+        <LinkButton href="https://www.makerspace-carinthia.com/">
+          Makerspace
+        </LinkButton>
+        in der <br /> Lastenstraße 26, 9020 Klagenfurt am Wörthersee statt.
+      </p>
+      <div class="flex items-center justify-center">
+        <div class="h-400 w-full" id="map"></div>
       </div>
     </section>
 

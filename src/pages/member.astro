@@ -1,0 +1,91 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+
+import Member from "@components/member.astro";
+---
+
+<header>
+  <title></title>
+</header>
+<Layout>
+  <Header activeNav="mitglieder" />
+  <main id="main-content">
+    <section id="member">
+      <h1 class="text-center text-2xl">Mitglieder</h1>
+      <div class="member-wrapper">
+        <div class="member">
+          <Member
+            alias="Maxwell"
+            name="Maximilian Birnbacher"
+            bio="Obmann"
+            linkedin="https://www.linkedin.com/in/maximilian-birnbacher/"
+            github="https://github.com/maxbirnbacher"
+            mail="mailto:mb@alp-sec.org"
+          />
+        </div>
+        <div class="member">
+          <Member
+            alias="f1re"
+            name="Felix Slama"
+            bio="Obmann Stellvertreter"
+            linkedin="https://www.linkedin.com/in/felixslama/"
+            github="https://github.com/f1re"
+            mail="mailto:fs@alp-sec.org"
+          />
+        </div>
+        <div class="member">
+          <Member
+            alias="aryt3"
+            name="Jannik Schager"
+            bio="Kassier"
+            web="https://aryt3.dev"
+            linkedin="https://www.linkedin.com/in/jannik-s-529743289/"
+            github="https://github.com/aryt3"
+            mail="mailto:js@alp-sec.org"
+          />
+        </div>
+        <div class="member">
+          <Member
+            name="Johannes Puinbroek"
+            alias="54toshi"
+            bio="Webmaster"
+            web="https://54toshi.com"
+            linkedin="https://www.linkedin.com/in/johannes-"
+            github="https://github.com/54toshi"
+            mail="mailto:jp@alp-sec.org"
+          />
+        </div>
+        <div class="member">
+          <Member
+            name="Jonas Heschl"
+            alias="Jones"
+            web="https://heschl.dev"
+            linkedin="https://www.linkedin.com/in/jonas-heschl/"
+            github="https://github.com/jonasheschl"
+          />
+        </div>
+        <div class="member">
+          <Member
+            name="Jürgen Rossmann"
+            linkedin="https://www.linkedin.com/in/j%C3%BCrgen-rossmann-5b4381211/"
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+
+  <style>
+    main {
+      @apply mt-10;
+    }
+    .member-wrapper {
+      @apply mt-10 flex flex-wrap justify-center;
+    }
+    .member {
+      @apply mb-56 h-32 w-48 object-contain pb-18 text-center;
+    }
+  </style>
+</Layout>

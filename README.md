@@ -1,4 +1,6 @@
 # AlpSec website
+[![Netlify Status](https://api.netlify.com/api/v1/badges/07bc2ccc-436b-4a2d-9534-d4677ef3bcbd/deploy-status)](https://app.netlify.com/sites/alpsec/deploys)
+
 
 Build with astro and the [astropaper](https://github.com/satnaing/astro-paper) theme.
 

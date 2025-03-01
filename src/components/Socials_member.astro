@@ -1,0 +1,76 @@
+---
+import type { SocialObjects } from "./../types";
+import LinkButton from "./LinkButton.astro";
+import socialIcons from "@assets/socialIcons";
+
+export interface Props {
+  centered?: boolean;
+}
+
+const {
+  centered = false,
+  name,
+  web,
+  linkedin,
+  twitter,
+  github,
+  mail,
+} = Astro.props;
+
+const SOCIALS: SocialObjects = [
+  {
+    name: "Web",
+    href: `${web}`,
+    linkTitle: `${name} on the Web`,
+    active: Boolean(web),
+  },
+  {
+    name: "LinkedIn",
+    href: `${linkedin}`,
+    linkTitle: `${name} on LinkedIn`,
+    active: Boolean(linkedin),
+  },
+  {
+    name: "Github",
+    href: `${github}`,
+    linkTitle: ` ${name} on Github`,
+    active: Boolean(github),
+  },
+  {
+    name: "X",
+    href: "https://github.com/satnaing/astro-paper",
+    linkTitle: `${name} on X`,
+    active: Boolean(twitter),
+  },
+  {
+    name: "Mail",
+    href: `${mail}`,
+    linkTitle: `Send an email to ${name}`,
+    active: Boolean(mail),
+  },
+];
+---
+
+<div class={`social-icons ${centered ? "flex" : ""}`}>
+  {
+    SOCIALS.filter(social => social.active).map(social => (
+      <LinkButton
+        href={social.href}
+        className="link-button"
+        title={social.linkTitle}
+      >
+        <Fragment set:html={socialIcons[social.name]} />
+        <span class="sr-only">{social.linkTitle}</span>
+      </LinkButton>
+    ))
+  }
+</div>
+
+<style>
+  .social-icons {
+    @apply flex-wrap justify-center gap-1;
+  }
+  .link-button {
+    @apply p-2 hover:rotate-6 sm:p-1;
+  }
+</style>

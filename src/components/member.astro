@@ -1,0 +1,35 @@
+---
+export interface Props {
+  centered?: boolean;
+}
+
+import SocialsMember from "@components/Socials_member.astro";
+import { Image } from "astro:assets";
+import generic from "../assets/images/generic_member.webp";
+
+const {
+  centered = false,
+  alias,
+  name,
+  image = generic,
+  bio,
+  web,
+  linkedin,
+  twitter,
+  github,
+  mail,
+} = Astro.props;
+---
+
+<Image src={image} alt=`${name}` />
+<h2 class="font-bold">{alias}</h2>
+<h3 class="text-xs font-bold">{name}</h3>
+<p class="text-xs">{bio}</p>
+<SocialsMember
+  name={name}
+  web={web}
+  linkedin={linkedin}
+  github={github}
+  mail={mail}
+  twitter={twitter}
+/>
