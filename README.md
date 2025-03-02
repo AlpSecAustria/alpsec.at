@@ -3,6 +3,9 @@
 
 
 Build with astro and the [astropaper](https://github.com/satnaing/astro-paper) theme.
+Domains hosted on godaddy
+Deployed to netlify
+Analytics with posthog
 
 
 ## project structure
