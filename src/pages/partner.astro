@@ -3,7 +3,9 @@ import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 
+import { SITE } from "@config";
 import { Image } from "astro:assets";
+
 import bpn from "../assets/images/bpn.png";
 import makerspace from "../assets/images/makerspace-244px.png";
 import teledrones from "../assets/images/teledrones.png";
@@ -17,10 +19,7 @@ import acsc from "../assets/images/Logo_ACSC_RGB-small.png";
 import startupcarinthia from "../assets/images/startup-carinthia-verein-logo.png";
 ---
 
-<header>
-  <title></title>
-</header>
-<Layout>
+<Layout title={`Partner | ${SITE.title}`}>
   <Header activeNav="partner" />
   <main id="main-content" class="pb-18">
     <section id="partner">

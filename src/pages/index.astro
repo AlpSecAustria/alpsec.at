@@ -23,16 +23,14 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 // const socialCount = SOCIALS.filter(social => social.active).length;
 ---
 
-<head>
+<Layout>
+  <Header />
+
   <!-- Elfsight LinkedIn Feed | Untitled LinkedIn Feed -->
   <script
     is:inline
     src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.10/iframeResizer.min.js"
     async></script>
-</head>
-
-<Layout>
-  <Header />
   <main id="main-content">
     <section id="About" class="mb-18">
       <div class="flex items-center justify-center">

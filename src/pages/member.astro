@@ -4,9 +4,10 @@ import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 
 import Member from "@components/member.astro";
+import { SITE } from "@config";
 ---
 
-<Layout>
+<Layout title={`Member | ${SITE.title}`}>
   <Header activeNav="mitglieder" />
   <main id="main-content">
     <section id="member">
