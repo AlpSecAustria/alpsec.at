@@ -6,9 +6,6 @@ import Footer from "@components/Footer.astro";
 import Member from "@components/member.astro";
 ---
 
-<header>
-  <title></title>
-</header>
 <Layout>
   <Header activeNav="mitglieder" />
   <main id="main-content">
@@ -91,16 +88,16 @@ import Member from "@components/member.astro";
     </section>
   </main>
   <Footer />
-
-  <style>
-    main {
-      @apply mt-10;
-    }
-    .member-wrapper {
-      @apply mt-10 flex flex-wrap justify-center;
-    }
-    .member {
-      @apply mb-56 h-32 w-48 object-contain pb-18 text-center;
-    }
-  </style>
 </Layout>
+
+<style>
+  main {
+    @apply mt-10;
+  }
+  .member-wrapper {
+    @apply mt-10 flex flex-wrap justify-center;
+  }
+  .member {
+    @apply mb-56 h-32 w-48 object-contain pb-18 text-center;
+  }
+</style>
