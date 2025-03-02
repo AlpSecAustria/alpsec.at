@@ -16,18 +16,14 @@ const { noMarginTop = false } = Astro.props;
   <Hr noPadding />
   <div class="footer-wrapper">
     <div class="m-5 w-1/3 text-center">
-      <h1 class="font-bold">Quicklinks</h1>
-      <div class="flex flex-wrap">
-        <div class="w-1/2 flex-1 sm:min-w-full">
-          <LinkButton href="/über_uns/">über uns</LinkButton><br />
-          <LinkButton href="/partner/">partner</LinkButton><br />
-          <LinkButton href="/statuten/">statuten</LinkButton><br />
-          <LinkButton href="/members/">mitglieder</LinkButton><br />
-        </div>
-        <div class="flex-2 w-1/2 sm:min-w-full">
-          <LinkButton href="/posts/">posts</LinkButton><br />
-          <LinkButton href="/kontakt/">kontakt</LinkButton><br />
-        </div>
+      <span class="font-bold">Quicklinks</span>
+      <div class="grid grid-cols-1 gap-1 ss:grid-cols-2">
+        <LinkButton href="/about/">über uns</LinkButton>
+        <LinkButton href="/member/">mitglieder</LinkButton>
+        <LinkButton href="/partner/">partner</LinkButton>
+        <LinkButton href="/statuten/">statuten</LinkButton>
+        <LinkButton href="/posts/">posts</LinkButton>
+        <LinkButton href="/contact/">kontakt</LinkButton>
       </div>
     </div>
     <div class="m-5 w-1/3 text-center">

@@ -2,6 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
+import LinkButton from "@components/LinkButton.astro";
 ---
 
 <Layout>
@@ -29,7 +30,11 @@ import Footer from "@components/Footer.astro";
         >
       </p>
       <h1 class="text-bold mt-5 text-2xl">Adresse</h1>
-      <p>Lastenstraße 26, <br />9020 Klagenfurt am Wörthersee</p>
+      <LinkButton
+        href="https://www.openstreetmap.org/#map=18/46.617721/14.317181"
+      >
+        Lastenstra&szlig;e 26, <br /> 9020 Klagenfurt am Wörthersee
+      </LinkButton>
     </section>
   </main>
   <Footer />
@@ -37,6 +42,6 @@ import Footer from "@components/Footer.astro";
 
 <style>
   main {
-    @apply mt-10;
+    @apply mb-10 mt-10;
   }
 </style>

@@ -57,9 +57,11 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
     <section id="socials" class="mt-18">
       <h2 class="mt-15 text-center">Lerne die Community kennen</h2>
-      <div class="flex flex-col lg:flex-row items-center justify-center">
-        <div class="flex-1">
-          <p>
+      <div class="flex flex-col items-center justify-center lg:flex-row">
+        <div
+          class="mt-10 grid max-w-md flex-1 grid-cols-1 justify-center text-center"
+        >
+          <p class="pl-10 pr-10">
             Tausche dich zu Themen rund um Cybersicherheit in unserer
             Discordgruppe aus.
           </p>
@@ -74,17 +76,17 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
             ></iframe>
           </div>
         </div>
-        <div class="flex-1">
-          <p>
+        <div
+          class="mt-10 grid max-w-md flex-1 grid-cols-1 justify-center text-center"
+        >
+          <p class="pl-14 pr-14">
             Folge uns in den Sozialen Medien und abonniere unseren E-mail
             Newsletter um auf dem neusten Stand zu bleiben.
           </p>
-          <div class="grid place-content-center">
-            <div
-              class="elfsight-app-5ebd96be-b502-4ba6-b054-35dc6b472ce5 mt-5"
-              data-elfsight-app-lazy
-            >
-            </div>
+          <div
+            class="elfsight-app-5ebd96be-b502-4ba6-b054-35dc6b472ce5 mt-5"
+            data-elfsight-app-lazy
+          >
           </div>
         </div>
       </div>
@@ -97,7 +99,13 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         <LinkButton href="https://www.makerspace-carinthia.com/">
           Makerspace
         </LinkButton>
-        in der <br /> Lastenstraße 26, 9020 Klagenfurt am Wörthersee statt.
+        in der <br />
+
+        <LinkButton
+          href="https://www.openstreetmap.org/#map=18/46.617721/14.317181"
+        >
+          Lastenstra&szlig;e 26, 9020 Klagenfurt am Wörthersee
+        </LinkButton>
       </p>
       <div class="flex items-center justify-center">
         <div class="h-400 w-full" id="map"></div>
@@ -167,6 +175,10 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     h2 {
       @apply text-3xl;
     }
+
+    .social-feed-description {
+      @apply flex h-full w-4/5 justify-center text-center;
+    }
     .leaflet-container {
       height: 400px;
       width: 600px;
@@ -194,13 +206,26 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 </Layout>
 
 <script>
-  const map = L.map("map").setView([46.6177192, 14.3171808], 16);
-  var marker = L.marker([46.6177192, 14.3171808]).addTo(map);
-  // marker.bindPopup("<b>AlpSec</b>").openPopup();
+  function initmap() {
+    const map = L.map("map").setView([46.6177192, 14.3171808], 16);
+    var marker = L.marker([46.6177192, 14.3171808]).addTo(map);
+    // marker.bindPopup("<b>AlpSec</b>").openPopup();
 
-  const tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 19,
-    attribution:
-      '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-  }).addTo(map);
+    const tiles = L.tileLayer(
+      "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+      {
+        maxZoom: 19,
+        attribution:
+          '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      }
+    ).addTo(map);
+  }
+
+  window.addEventListener("load", () => {
+    initmap();
+  });
+
+  window.addEventListener("popstate", () => {
+    initmap();
+  });
 </script>
