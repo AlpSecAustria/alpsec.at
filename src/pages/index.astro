@@ -38,8 +38,10 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     crossorigin=""></script>
 
   <!-- Elfsight LinkedIn Feed | Untitled LinkedIn Feed -->
-  <script is:inline src="https://static.elfsight.com/platform/platform.js" async
-  ></script>
+  <script
+    is:inline
+    src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.10/iframeResizer.min.js"
+    async></script>
 </head>
 
 <Layout>
@@ -84,10 +86,12 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
             Folge uns in den Sozialen Medien und abonniere unseren E-mail
             Newsletter um auf dem neusten Stand zu bleiben.
           </p>
-          <div
-            class="elfsight-app-5ebd96be-b502-4ba6-b054-35dc6b472ce5 mt-5"
-            data-elfsight-app-lazy
-          >
+          <div class="mt-5 grid place-content-center">
+            <iframe
+              onload="iFrameResize(this)"
+              width="350"
+              height="450"
+              src="https://5ebd96beb5024ba6b05435dc6b472ce5.elf.site"></iframe>
           </div>
         </div>
       </div>
