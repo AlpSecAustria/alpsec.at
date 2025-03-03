@@ -33,13 +33,17 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     async></script>
   <main id="main-content">
     <section id="About" class="mb-18">
-      <div class="flex items-center justify-center">
+      <div class="grid grid-cols-2 grid-rows-1">
         <!-- <h1 class="w-1/2 text-right text-7xl">AlpSec</h1> -->
-        <Image src={logo} alt="AlpSec Logo" class="w-1/4" />
+        <div class="flex justify-end">
+          <Image src={logo} alt="AlpSec Logo" class="h-auto w-56" />
+        </div>
 
-        <p class="w-1/2 justify-center text-left text-xl">
-          Verein zur Förderung von Cybersicherheit in Kärnten <br /> und Österreich
-        </p>
+        <div class="flex items-center justify-start text-left text-xl">
+          <p>
+            Verein zur Förderung von Cybersicherheit in Kärnten <br /> und Österreich
+          </p>
+        </div>
       </div>
     </section>
 
@@ -169,29 +173,29 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     </section> -->
   </main>
   <Footer />
+
+  <style>
+    h2 {
+      @apply text-3xl;
+    }
+    .social-feed-description {
+      @apply flex h-full w-4/5 justify-center text-center;
+    }
+    .flex-social {
+      @apply mt-5 w-1/2 items-center justify-center text-center;
+    }
+
+    /* ===== Featured & Recent Posts Sections ===== */
+    #featured,
+    #recent-posts {
+      @apply pb-6 pt-12;
+    }
+    #featured h2,
+    #recent-posts h2 {
+      @apply text-2xl font-semibold tracking-wide;
+    }
+    .all-posts-btn-wrapper {
+      @apply my-8 text-center;
+    }
+  </style>
 </Layout>
-
-<style>
-  h2 {
-    @apply text-3xl;
-  }
-  .social-feed-description {
-    @apply flex h-full w-4/5 justify-center text-center;
-  }
-  .flex-social {
-    @apply mt-5 w-1/2 items-center justify-center text-center;
-  }
-
-  /* ===== Featured & Recent Posts Sections ===== */
-  #featured,
-  #recent-posts {
-    @apply pb-6 pt-12;
-  }
-  #featured h2,
-  #recent-posts h2 {
-    @apply text-2xl font-semibold tracking-wide;
-  }
-  .all-posts-btn-wrapper {
-    @apply my-8 text-center;
-  }
-</style>
