@@ -10,7 +10,7 @@ import { SITE } from "@config";
   <Header activeNav="kontakt" />
   <main id="main-content">
     <section id="contact">
-      <h1 class="text-bold text-2xl">Kontakt</h1>
+      <h1 class="">Kontakt</h1>
       <p>
         Kontaktiere den Verein: <LinkButton href="mailto:contact@alp-sec.org"
           >contact@alp-sec.org</LinkButton
@@ -32,7 +32,7 @@ import { SITE } from "@config";
           >jp@alp-sec.org</LinkButton
         >
       </p>
-      <h1 class="text-bold mt-5 text-2xl">Adresse</h1>
+      <h2 class="mt-5 text-2xl">Adresse</h2>
       <LinkButton
         href="https://www.openstreetmap.org/#map=18/46.617721/14.317181"
       >
@@ -44,7 +44,7 @@ import { SITE } from "@config";
 </Layout>
 
 <style>
-  main {
-    @apply mb-10 mt-10;
+  h2 {
+    @apply font-semibold;
   }
 </style>

@@ -44,7 +44,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     </section>
 
     <section id="socials" class="mt-18">
-      <h2 class="mt-15 text-center">Lerne die Community kennen</h2>
+      <h1 class="mt-15 text-center">Lerne die Community kennen</h1>
       <div class="flex flex-col items-center justify-center lg:flex-row">
         <div
           class="mt-10 grid max-w-md flex-1 grid-cols-1 justify-center text-center"
@@ -64,7 +64,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
             ></iframe>
           </div>
         </div>
-        <div
+        <!-- <div
           class="mt-10 grid max-w-md flex-1 grid-cols-1 justify-center text-center"
         >
           <p class="pl-14 pr-14">
@@ -78,7 +78,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
               height="450"
               src="https://5ebd96beb5024ba6b05435dc6b472ce5.elf.site"></iframe>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -95,7 +95,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
           href="https://www.openstreetmap.org/#map=18/46.617721/14.317181"
         >
           Lastenstra&szlig;e 26, 9020 Klagenfurt am Wörthersee
-        </LinkButton>
+        </LinkButton> statt.
       </p>
       <div class="flex items-center justify-center">
         <Leaflet
@@ -116,7 +116,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     </section>
 
     <!-- <Hr /> -->
-    {
+    <!-- {
       featuredPosts.length > 0 && (
         <>
           <section id="featured">
@@ -166,19 +166,15 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
           </svg>
         </LinkButton>
       </div>
-    </section>
+    </section> -->
   </main>
   <Footer />
 </Layout>
 
 <style>
-  main {
-    @apply mt-18;
-  }
   h2 {
     @apply text-3xl;
   }
-
   .social-feed-description {
     @apply flex h-full w-4/5 justify-center text-center;
   }

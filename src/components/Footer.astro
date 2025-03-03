@@ -15,29 +15,33 @@ const { noMarginTop = false } = Astro.props;
 <footer class={`${noMarginTop ? "" : "mt-auto"}`}>
   <Hr noPadding />
   <div class="footer-wrapper">
-    <div class="m-5 w-1/3 text-center">
+    <div class="m-5 flex-1 text-center">
       <span class="font-bold">Quicklinks</span>
       <div class="grid grid-cols-1 gap-1 ss:grid-cols-2">
         <LinkButton href="/about/">über uns</LinkButton>
         <LinkButton href="/member/">mitglieder</LinkButton>
         <LinkButton href="/partner/">partner</LinkButton>
         <LinkButton href="/statuten/">statuten</LinkButton>
-        <LinkButton href="/posts/">posts</LinkButton>
+        <!-- <LinkButton href="/posts/">beitr&auml;ge</LinkButton> -->
         <LinkButton href="/contact/">kontakt</LinkButton>
       </div>
     </div>
-    <div class="m-5 w-1/3 text-center">
+    <div class="m-5 flex-1 text-center">
       <LinkButton
         href="https://www.openstreetmap.org/#map=18/46.617721/14.317181"
       >
         Lastenstra&szlig;e 26, <br /> 9020 Klagenfurt am Wörthersee
       </LinkButton>
     </div>
-    <div class="m-5 w-1/3 text-center">
-      <Socials />
-      <span class="whitespace-nowrap">
-        Webmaster: <LinkButton href="https://54toshi.com"> 54toshi </LinkButton>
-      </span>
+    <div class="m-5 flex-1 text-center">
+      <div class="grid grid-cols-1 gap-1">
+        <Socials />
+        <span class="whitespace-nowrap text-center">
+          Webmaster: <LinkButton href="https://54toshi.com">
+            54toshi
+          </LinkButton>
+        </span>
+      </div>
     </div>
   </div>
 </footer>

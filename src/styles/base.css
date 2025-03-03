@@ -30,12 +30,18 @@
   html[data-theme="dark"] #sun-svg {
     display: block;
   }
+  main {
+    @apply mb-16 mt-18;
+  }
   body {
     @apply flex min-h-[100svh] flex-col bg-skin-fill font-mono text-skin-base selection:bg-skin-accent/70 selection:text-skin-inverted;
   }
   section,
   footer {
     @apply mx-auto max-w-4xl px-4;
+  }
+  h1 {
+    @apply text-2xl font-semibold sm:text-4xl;
   }
   a {
     @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
