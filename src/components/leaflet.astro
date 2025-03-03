@@ -55,8 +55,12 @@ const {
 
         L.Icon.Default.prototype.options.iconUrl =
           "../../../../assets/leaflet/marker-icon.png";
+        L.Icon.Default.prototype.options.iconRetinaUrl =
+          "../../../../assets/leaflet/marker-icon-2x.png";
         L.Icon.Default.prototype.options.shadowUrl =
           "../../../../assets/leaflet/marker-shadow.png";
+        // L.Icon.Default.prototype.options.shadowRetinaUrl =
+        //   "../../../../assets/leaflet/marker-shadow.png";
 
         var marker = L.marker([46.6177192, 14.3171808]).addTo(map);
       }
