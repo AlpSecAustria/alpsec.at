@@ -17,13 +17,14 @@ import htlvillach from "../assets/images/htlvillach.svg";
 import aau from "../assets/images/aau.png";
 import acsc from "../assets/images/Logo_ACSC_RGB-small.png";
 import startupcarinthia from "../assets/images/startup-carinthia-verein-logo.png";
+import LinkButton from "@components/LinkButton.astro";
 ---
 
 <Layout title={`Partner | ${SITE.title}`}>
   <Header activeNav="partner" />
   <main id="main-content" class="pb-18">
     <section id="partner">
-      <h1>Partner</h1>
+      <h1>Infrastruktur Partner</h1>
       <div class="flex justify-center">
         <div class="sponsor-wrapper">
           <a href="https://www.makerspace-carinthia.com/">
@@ -34,11 +35,6 @@ import startupcarinthia from "../assets/images/startup-carinthia-verein-logo.png
             />
           </a>
         </div>
-        <!-- <div class="sponsor-wrapper">
-          <a href="https://easyplus.media/">
-            <Image src={easyplus} alt="easyplus.media" class="sponsor" />
-          </a>
-        </div> -->
       </div>
     </section>
     <section id="sponsoren">
@@ -102,6 +98,11 @@ import startupcarinthia from "../assets/images/startup-carinthia-verein-logo.png
           </a>
         </div>
         <!-- <div class="sponsor-wrapper">
+          <a href="https://easyplus.media/">
+            <Image src={easyplus} alt="easyplus.media" class="sponsor" />
+          </a>
+        </div> -->
+        <!-- <div class="sponsor-wrapper">
           <a href="https://startupcarinthia.com/">
             <Image
               src={startupcarinthia}
@@ -110,6 +111,13 @@ import startupcarinthia from "../assets/images/startup-carinthia-verein-logo.png
             />
           </a>
         </div> -->
+      </div>
+    </section>
+    <section id="call-to-action">
+      <div class="my-8 text-center text-2xl underline">
+        <LinkButton href="mailto:contact@alp-sec.org"
+          >Werde Partner oder Sponsor</LinkButton
+        >
       </div>
     </section>
   </main>

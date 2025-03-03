@@ -32,7 +32,6 @@ const {
   data-attribution={attribution}
   data-containerstyle={containerstyle}
 >
-  <div id={container} style={containerstyle}></div>
   <script>
     import "leaflet/dist/leaflet";
     import "leaflet/dist/leaflet.css";
@@ -53,6 +52,12 @@ const {
         L.tileLayer(this.dataset.tiles, {
           attribution: this.dataset.attribution,
         }).addTo(map);
+
+        L.Icon.Default.prototype.options.iconUrl =
+          "../../../../assets/leaflet/marker-icon.png";
+        L.Icon.Default.prototype.options.shadowUrl =
+          "../../../../assets/leaflet/marker-shadow.png";
+
         var marker = L.marker([46.6177192, 14.3171808]).addTo(map);
       }
     }
