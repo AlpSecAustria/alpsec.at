@@ -1,0 +1,141 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import LinkButton from "@components/LinkButton.astro";
+
+import { SITE } from "@config";
+---
+
+<Layout title={`Impressum | ${SITE.title}`}>
+  <Header />
+  <main id="main-content">
+    <section id="impressum">
+      <h1 class="text-center">Impressum</h1>
+      <br />
+
+      <p class="adsimple-122965611">
+        Informationen und Offenlegung gemäß §5 (1) ECG, § 25 MedienG, § 63 GewO
+        und § 14 UGB
+      </p>
+      <p>
+        <strong>Vereinsname:</strong> AlpSec – Verein zur Förderung von offensiver
+        und defensiver Cybersicherheit kurz: AlpSec<br />
+        <strong>ZVR-Zahl:</strong> 1989150597<br />
+        <strong>Vereinssitz:</strong> Villach (Villach)<br />
+        <strong>E-Mail:</strong>
+        <LinkButton href="mailto:contact@alp-sec.org"
+          >contact@alp-sec.org</LinkButton
+        ><br /><br />
+
+        <strong>Obmann/Obfrau:</strong>
+        <br />Maximilian Birnbacher<br />
+        <strong>E-Mail:</strong>
+        <LinkButton href="mailto:mb@alp-sec.org">mb@alp-sec.org</LinkButton><br
+        /><br />
+
+        <strong>Obmann/Obfrau Stellvertreter:</strong>
+        <br />Felix Slama<br />
+        <strong>E-Mail:</strong>
+        <LinkButton href="mailto:fs@alp-sec.org">fs@alp-sec.org</LinkButton>
+      </p>
+      <div style="display:none"></div>
+      <p>
+        <strong>Alternative Adresse</strong>
+        <br />Lastenstraße 26<br />
+        9020 Klagenfurt am Woerthersee
+      </p>
+      <div style="display:none"></div>
+      <div style="display:none"></div>
+      <p>
+        <strong>Vereinszweck</strong>
+        <br />Verein zur Förderung von offensiver und defensiver Cybersicherheit
+      </p>
+      <p>
+        <strong>Datenschutz Verantwortlicher</strong>
+        <br />Johannes Puinbroek<br />
+        <strong>E-Mail:</strong>
+        <LinkButton href="mailto:jp@alp-se.org">jp@alp-se.org</LinkButton>
+      </p>
+      <div style="display:none"></div>
+      <div style="display:none"></div>
+      <div style="display:none"></div>
+      <div style="display:none"></div>
+      <h2
+        id="eu-streitschlichtung"
+        class="adsimple-122965611 fusion-responsive-typography-calculated"
+        data-fontsize="24"
+        style="--fontSize: 24;line-height: 1.5;--minFontSize: 24"
+        data-lineheight="36px"
+      >
+        EU-Streitschlichtung
+      </h2>
+      <p class="adsimple-122965611">
+        Gemäß Verordnung über Online-Streitbeilegung in
+        Verbraucherangelegenheiten (ODR-Verordnung) möchten wir Sie über die
+        Online-Streitbeilegungsplattform (OS-Plattform) informieren.<br />
+        Verbraucher haben die Möglichkeit, Beschwerden an die Online Streitbeilegungsplattform
+        der Europäischen Kommission unter <LinkButton
+          href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=DE"
+          >https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&amp;lng=DE</LinkButton
+        > zu richten. Die dafür notwendigen Kontaktdaten finden Sie oberhalb in unserem
+        Impressum.
+      </p>
+      <p class="adsimple-122965611">
+        Wir möchten Sie jedoch darauf hinweisen, dass wir nicht bereit oder
+        verpflichtet sind, an Streitbeilegungsverfahren vor einer
+        Verbraucherschlichtungsstelle teilzunehmen.
+      </p>
+      <h2
+        id="onlineauftritte"
+        class="adsimple-122965611 fusion-responsive-typography-calculated"
+        data-fontsize="24"
+        style="--fontSize: 24;line-height: 1.5;--minFontSize: 24"
+        data-lineheight="36px"
+      >
+        Weitere Onlineauftritte
+      </h2>
+      <p>
+        <strong>Dieses Impressum gilt auch für</strong>
+        <br />
+        <LinkButton href="https://www.linkedin.com/company/alpsec"
+          >https://www.linkedin.com/company/alpsec</LinkButton
+        >
+        <br />
+        <LinkButton href="https://github.com/AlpSecAustria/"
+          >https://github.com/AlpSecAustria/</LinkButton
+        >
+      </p>
+      <div style="display:none"></div>
+      <div style="display:none"></div>
+      <div style="display:none"></div>
+      <div style="display:none"></div>
+      <p>Alle Texte sind urheberrechtlich geschützt.</p>
+      <p style="margin-top:15px">
+        Quelle: Erstellt mit dem
+        <LinkButton
+          href="https://www.adsimple.at/impressum-generator/"
+          title="Impressum Generator Österreich von AdSimple"
+        >
+          Impressum Generator von AdSimple</LinkButton
+        >
+      </p>
+    </section>
+  </main>
+</Layout>
+<Footer />
+
+<style>
+  h2 {
+    @apply mt-8 text-lg font-bold;
+  }
+  ul {
+    @apply list-disc space-y-2 pl-5;
+  }
+  ol {
+    @apply mt-3 list-decimal space-y-2 pl-5;
+  }
+  p {
+    @apply mt-3;
+  }
+</style>
