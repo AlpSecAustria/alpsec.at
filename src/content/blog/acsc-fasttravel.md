@@ -1,6 +1,6 @@
 ---
 author: Aryt3
-pubDatetime: 2025-05-01T19:00:00Z
+pubDatetime: 2025-05-01
 title: ACSC Fasttravel Writeup
 slug: acsc-fasttravel
 featured: true
