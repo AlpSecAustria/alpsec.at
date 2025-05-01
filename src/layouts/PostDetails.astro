@@ -73,7 +73,7 @@ const nextPost =
         ><path
           d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
         ></path>
-      </svg><span>Go back</span>
+      </svg><span>Zurück</span>
     </button>
   </div>
   <main id="main-content">
@@ -83,6 +83,7 @@ const nextPost =
     <Datetime
       pubDatetime={pubDatetime}
       modDatetime={modDatetime}
+      author={author}
       size="lg"
       className="my-2"
       editPost={editPost}
@@ -108,7 +109,7 @@ const nextPost =
             d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
           ></path>
         </svg>
-        <span>Back to Top</span>
+        <span>Zurück zum Anfang</span>
       </button>
 
       <ShareLinks />
@@ -140,7 +141,7 @@ const nextPost =
               <path d="M15 6l-6 6l6 6" />
             </svg>
             <div>
-              <span>Previous Post</span>
+              <span>Letzter Beitrag</span>
               <div class="text-sm text-skin-accent/85">{prevPost.title}</div>
             </div>
           </a>
@@ -153,7 +154,7 @@ const nextPost =
             class="flex w-full justify-end gap-1 text-right hover:opacity-75 sm:col-start-2"
           >
             <div>
-              <span>Next Post</span>
+              <span>Nächster Beitrag</span>
               <div class="text-sm text-skin-accent/85">{nextPost.title}</div>
             </div>
             <svg

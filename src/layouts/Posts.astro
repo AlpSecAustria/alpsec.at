@@ -9,6 +9,13 @@ import { SITE } from "@config";
 import type { Page } from "astro";
 import type { CollectionEntry } from "astro:content";
 
+import Tag from "@components/Tag.astro";
+import { getCollection } from "astro:content";
+import getUniqueTags from "@utils/getUniqueTags";
+
+const posts = await getCollection("blog");
+let tags = getUniqueTags(posts);
+
 export interface Props {
   page: Page<CollectionEntry<"blog">>;
 }
@@ -16,9 +23,12 @@ export interface Props {
 const { page } = Astro.props;
 ---
 
-<Layout title={`Posts | ${SITE.title}`}>
+<Layout title={`Beiträge | ${SITE.title}`}>
   <Header activeNav="posts" />
   <Main pageTitle="Beiträge" pageDesc="Beiträge veröffentlicht von AlpSec">
+    <ul>
+      {tags.map(({ tag, tagName }) => <Tag {tag} {tagName} size="lg" />)}
+    </ul>
     <ul>
       {
         page.data.map(({ data, slug }) => (

@@ -15,7 +15,7 @@ export const SITE: Site = {
   showArchives: false,
   editPost: {
     url: "https://github.com/AlpSecAustria/website/edit/main/src/content/blog",
-    text: "Suggest Changes",
+    text: "Änderungen vorschlagen",
     appendFilePath: true,
   },
 };

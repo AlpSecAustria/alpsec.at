@@ -4,6 +4,7 @@ import type { CollectionEntry } from "astro:content";
 interface DatetimesProps {
   pubDatetime: string | Date;
   modDatetime: string | Date | undefined | null;
+  author: string | undefined | null;
 }
 
 interface EditPostProps {
@@ -19,6 +20,7 @@ interface Props extends DatetimesProps, EditPostProps {
 export default function Datetime({
   pubDatetime,
   modDatetime,
+  author,
   size = "sm",
   className = "",
   editPost,
@@ -50,6 +52,22 @@ export default function Datetime({
           pubDatetime={pubDatetime}
           modDatetime={modDatetime}
         />
+
+        <span>
+          <span> </span>
+          <svg
+            fill="#000000"
+            viewBox="0 0 19 19"
+            xmlns="http://www.w3.org/2000/svg"
+            className={`${
+              size === "sm" ? "scale-90" : "scale-100"
+            } inline-block h-6 w-6 min-w-[1.375rem] fill-skin-base`}
+          >
+            <path d="M12.517 12.834v1.9a1.27 1.27 0 0 1-1.267 1.267h-9.5a1.27 1.27 0 0 1-1.267-1.267v-1.9A3.176 3.176 0 0 1 3.65 9.667h5.7a3.176 3.176 0 0 1 3.167 3.167zM3.264 5.48A3.236 3.236 0 1 1 6.5 8.717a3.236 3.236 0 0 1-3.236-3.236z" />
+          </svg>
+          <span>{author} </span>
+        </span>
+
         {size === "lg" && <EditPost editPost={editPost} postId={postId} />}
       </span>
     </div>
@@ -95,7 +113,7 @@ const EditPost = ({ editPost, postId }: EditPostProps) => {
   return (
     showEditPost && (
       <>
-        <span aria-hidden="true"> | </span>
+        {/* <span aria-hidden="true"> | </span> */}
         <a
           className="space-x-1.5 hover:opacity-75"
           href={editPostUrl}

@@ -2,7 +2,7 @@
 import { LOCALE, SITE } from "@config";
 import "@styles/base.css";
 import { ViewTransitions } from "astro:transitions";
-import Analytics from "@components/analytics.astro";
+import Posthog from "@components/analytics/posthog.astro";
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
@@ -63,7 +63,7 @@ const structuredData = {
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- favicon https://favicon.io/ -->
+    <!-- favicon https://favicon.ico/ -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -141,7 +141,7 @@ const structuredData = {
 
     <ViewTransitions />
 
-    <Analytics />
+    <Posthog />
     <script is:inline src="/toggle-theme.js" async></script>
   </head>
   <body>
