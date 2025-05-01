@@ -2,13 +2,14 @@
 author: Aryt3
 pubDatetime: 2025-05-01
 title: ACSC Echochip Writeup
-slug: echochip
+slug: acsc-echochip
 featured: true
 draft: false
 tags:
+  - ACSC
   - pwn
 description:
-    The solution of the ACSC Echochip challenge
+  A Writeup and Walkthrough of the ACSC Echochip challenge.
 ---
 
 
