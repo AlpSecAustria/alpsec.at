@@ -164,7 +164,8 @@ def get_note(filename, access_key):
 ```
 
 > An application is susceptible to a hash length extension attack if it prepends a secret value to a string, hashes it with a vulnerable algorithm, and entrusts the attacker with both the string and the hash, but not the secret. <br/>
-> Then, the server relies on the secret to decide whether or not the data returned later is the same as the original data. <br/>
+> Then, the server relies on the secret to decide whether or not the data returned later is the same as the original data. 
+
 *[source](https://www.skullsecurity.org/2012/everything-you-need-to-know-about-hash-length-extension-attacks)*
 
 Even though we don’t know the secret, we can forge a valid hash for a longer message — such as one containing a path traversal payload. <br/>
