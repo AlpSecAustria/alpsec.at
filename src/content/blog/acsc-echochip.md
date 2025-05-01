@@ -82,7 +82,7 @@ Please input the message to echo:
 a78252e.e1ae3080.a78252e.0.0.e1ae34b8.28.0.27.e1ae30a7.e1ae31aa.252e7825.2e78252e.78252e78
 ```
 
-As we can I see in the output, we are leaking data from the stack. <br/>
+As we can see in the output, we are leaking data from the stack. <br/>
 The thing that interests me the most is that the flag is being read from an `env-var`. <br/>
 `char *flag_env = getenv("FLAG");` this indicates that the string should be loaded into memory at some point. <br/>
 

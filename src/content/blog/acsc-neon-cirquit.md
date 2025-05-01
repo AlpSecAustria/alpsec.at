@@ -27,7 +27,7 @@ Your mission: infiltrate its native add-in, uncover the secrets hidden in its co
 
 ## Writeup
 
-Starting off I inspected the AppImage soon found files indicating that it's probably an electron binary. <br/>
+Starting off, I inspected the AppImage soon found files indicating that it's probably an electron binary. <br/>
 ```sh
 ./neon-cirquit-1.0.0.AppImage --appimage-extract
 ...
@@ -73,10 +73,10 @@ const rl = readline.createInterface({
 ```
 
 To extract the password from the `addon` I used `gdb` to debug the binary. 
-For this purpose I setup a simple `javascript program` with `node.js` which would ask for a password input and then call the binary to validate it. 
+For this purpose I set up a simple `javascript program` with `node.js` which would ask for a password input and then call the binary to validate it. 
 Once executed (*node test.js*) and prompted for a password I used `gdb -p PID` to debug the process containing the `addon.node`. <br/>
 
-To get the flag I used the following methodology (This works because the flag has to be loaded into memory at some point to compare to our input). <br/> 
+To get the flag, I used the following methodology (This works because the flag has to be loaded into memory at some point to compare to our input). <br/> 
 - Break on password check function <br/>
 - step through the function <br/>
 - print registers and hex-decode them until you get the flag. <br/>

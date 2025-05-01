@@ -50,7 +50,7 @@ I checked the application further for all possibilities of flag retrieval. <br/>
 - Access `global-context` of the application and read the `FLAG` variable. <br/>
 - Read `environment-variables` and get the flag. <br/>
 
-Looking through the code for `global-context` escape I couldn't find any real vulnerabilities as classes liek the one below only allow `str` data-types as input for both `key` and `value`. To climb to the `global-context` the value would need to be injected with a dictionary. <br/>
+Looking through the code for `global-context` escape I couldn't find any real vulnerabilities as classes like the one below only allow `str` data-types as input for both `key` and `value`. To climb to the `global-context` the value would need to be injected with a dictionary. <br/>
 ```py
 class LRUDict(dict[_KT, _VT]):
     def __init__(self, max_size: int):
@@ -77,7 +77,7 @@ class LRUDict(dict[_KT, _VT]):
 ```
 
 To access the `/admin` endpoint we somehow need to bypass the `Host-Header-Check`. <br/>
-This is not feasable because there is a `caddy` reverse-proxy config which replaces `Host` headers in every incoming request. <br/>
+This is not feasible because there is a `caddy` reverse-proxy config which replaces `Host` headers in every incoming request. <br/>
 ```py
 :5000 {
     reverse_proxy localhost:5001 {
@@ -126,7 +126,7 @@ async def shorten(request: Request) -> Response:
 ```
 
 In the endpoint above we can see `await Requester().get(url)` which actually makes a request to a provided `URL`. <br/>
-If we send a reques to the endpoints through this `Requester()` class we can bypass the `reverse-proxy` because the request is executed locally. <br/>
+If we send a request to the endpoints through this `Requester()` class we can bypass the `reverse-proxy` because the request is executed locally. <br/>
 Looking at the `Requester()` class we can see that the `Host` header is actually set via the logic below. <br/>
 ```py
 scheme, hostname, port, path = urlparse(url)

@@ -252,7 +252,7 @@ $ r2 -w ./rewire
 └           0x00001388      c3             ret
 ```
 
-Executing the bianry now enters the `disable_cctv` function. <br/>
+Executing the binary now enters the `disable_cctv` function. <br/>
 ```sh
 $ ./rewire
 ion Pro
@@ -263,7 +263,7 @@ Disabling CCTV feed...
 ߧ����������ՙ�∙��Ι������޴��ؙ��䱠����ύ�������r
 ```
 
-Looking at the disassembled code we can see a requried key. <br/>
+Looking at the disassembled code we can see a required key. <br/>
 ```c
 if (key != 0x4e657854) {
     puts("GLOBAL key is invalid");
