@@ -1,6 +1,6 @@
 ---
 author: Aryt3
-pubDatetime: 2025-05-01T17:00:00Z
+pubDatetime: 2025-05-01T19:00:00Z
 title: ACSC Simplesample Writeup
 slug: acsc-simplesample
 featured: true
