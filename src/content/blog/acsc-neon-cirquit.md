@@ -27,7 +27,7 @@ Your mission: infiltrate its native add-in, uncover the secrets hidden in its co
 
 ## Writeup
 
-Starting off, I inspected the AppImage soon found files indicating that it's probably an electron binary. <br/>
+Starting off, I inspected the AppImage and soon found files indicating that it's probably an electron binary. <br/>
 ```sh
 ./neon-cirquit-1.0.0.AppImage --appimage-extract
 ...
