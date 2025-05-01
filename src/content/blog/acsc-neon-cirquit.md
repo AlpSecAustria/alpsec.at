@@ -1,6 +1,6 @@
 ---
 author: Aryt3
-pubDatetime: 2025-05-01
+pubDatetime: 2025-05-01T17:00:00Z
 title: ACSC Neon-Cirquit Writeup
 slug: acsc-neon-cirquit
 featured: true
