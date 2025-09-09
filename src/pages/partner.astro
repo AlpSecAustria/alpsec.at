@@ -11,6 +11,8 @@ import makerspace from "../assets/images/makerspace-244px.png";
 import teledrones from "../assets/images/teledrones.png";
 import easyplus from "../assets/images/easyplus.webp";
 import passgenau from "../assets/images/passgenau.svg";
+import capstaed from "../assets/images/capstaed_transparent_8k.png";
+import hexsh from "../assets/images/logo_hexsh.svg";
 import pwndlabs from "../assets/images/pwndlabs.png";
 import cybersecurityaustria from "../assets/images/CSA-Logo-300x94.png";
 import htlvillach from "../assets/images/htlvillach.svg";
@@ -23,22 +25,8 @@ import LinkButton from "@components/LinkButton.astro";
 <Layout title={`Partner | ${SITE.title}`}>
   <Header activeNav="partner" />
   <main id="main-content" class="pb-18">
-    <section id="partner">
-      <!-- <h1>Infrastruktur Partner</h1>
-      <div class="flex justify-center">
-        <div class="sponsor-wrapper">
-          <a href="https://www.makerspace-carinthia.com/">
-            <Image
-              src={makerspace}
-              alt="Makerspace Carinthia"
-              class="sponsor"
-            />
-          </a>
-        </div> -->
-      </div>
-    </section>
     <section id="sponsoren">
-      <h2>Sponsoren</h2>
+      <h1>Sponsoren</h1>
       <div class="flex justify-center">
         <div class="sponsor-wrapper">
           <a href="https://www.bpn-group.com/">
@@ -52,10 +40,24 @@ import LinkButton from "@components/LinkButton.astro";
         </div> -->
       </div>
     </section>
+    <section id="partner">
+      <h2>Infrastruktur Partner</h2>
+      <div class="flex justify-center">
+        <div class="sponsor-wrapper">
+          <a href="https://www.makerspace-carinthia.com/">
+            <Image
+              src={makerspace}
+              alt="Makerspace Carinthia"
+              class="sponsor"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
     <section id="network">
       <h2>Netzwerk</h2>
       <div class="flex flex-wrap justify-center">
-        <!-- <div class="sponsor-wrapper">
+        <div class="sponsor-wrapper">
           <a href="https://verbotengut.at/">
             <Image
               src={cybersecurityaustria}
@@ -63,13 +65,13 @@ import LinkButton from "@components/LinkButton.astro";
               class="sponsor"
             />
           </a>
-        </div> -->
+        </div>
         <!-- <div class="sponsor-wrapper">
           <a href="https://www.htl-villach.at/">
             <Image src={htlvillach} alt="HTL Villach" class="sponsor" />
           </a>
         </div> -->
-        <!-- <div class="sponsor-wrapper">
+        <div class="sponsor-wrapper">
           <a href="https://acsc.land/">
             <Image
               src={acsc}
@@ -77,7 +79,7 @@ import LinkButton from "@components/LinkButton.astro";
               class="sponsor"
             />
           </a>
-        </div> -->
+        </div>
         <!-- <div class="sponsor-wrapper">
           <a href="https://www.aau.at/">
             <Image
@@ -95,6 +97,16 @@ import LinkButton from "@components/LinkButton.astro";
         <div class="sponsor-wrapper">
           <a href="https://passgenau.digital/">
             <Image src={passgenau} alt="Passgenau.digital" class="sponsor" />
+          </a>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="#">
+            <Image src={hexsh} alt="Capstaed" class="sponsor" />
+          </a>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="https://www.capstaed.com/">
+            <Image src={capstaed} alt="Capstaed" class="sponsor" />
           </a>
         </div>
         <!-- <div class="sponsor-wrapper">
